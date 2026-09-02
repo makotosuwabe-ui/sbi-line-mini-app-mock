@@ -29,27 +29,66 @@ function save() {
 
 function logo() {
   return `
-    <svg class="logo-mark" viewBox="0 0 48 48" role="img" aria-label="SBI新生銀行">
-      <rect width="48" height="48" rx="8" fill="#12324a"></rect>
-      <path d="M12 15h24v6H20a3 3 0 0 0 0 6h8a9 9 0 0 1 0 18H12v-6h16a3 3 0 0 0 0-6h-8a9 9 0 0 1 0-18Z" fill="#fff"></path>
-      <circle cx="37" cy="11" r="5" fill="#00a56a"></circle>
-    </svg>`;
+    <div class="logo-lockup" role="img" aria-label="SBI新生銀行カードローン">
+      <svg class="logo-emblem" viewBox="0 0 62 38" aria-hidden="true">
+        <rect width="62" height="38" rx="5" fill="#143f6b"></rect>
+        <path d="M10 11h20v5H17.5a2.6 2.6 0 0 0 0 5.2h6.2a7.9 7.9 0 0 1 0 15.8H10v-5h13.7a2.6 2.6 0 0 0 0-5.2h-6.2a7.9 7.9 0 0 1 0-15.8Z" fill="#fff"></path>
+        <path d="M35 11h7.5c5 0 8 2.2 8 6 0 2.2-1.1 3.8-3.2 4.6 2.6.8 4 2.7 4 5.4 0 4.4-3.3 7-8.8 7H35V11Zm6 5v4h2c1.5 0 2.4-.7 2.4-2s-.9-2-2.4-2h-2Zm0 9v4h2.6c1.6 0 2.6-.8 2.6-2s-1-2-2.6-2H41Z" fill="#fff"></path>
+        <circle cx="55" cy="8" r="4.5" fill="#00a56a"></circle>
+      </svg>
+      <span>SBI新生銀行</span>
+    </div>`;
 }
 
 function illustration() {
   return `
-    <svg class="hero-illust" viewBox="0 0 210 180" aria-hidden="true">
-      <rect x="76" y="24" width="94" height="132" rx="18" fill="#12324a"></rect>
-      <rect x="86" y="38" width="74" height="98" rx="10" fill="#f7fbfd"></rect>
-      <rect x="98" y="52" width="50" height="10" rx="5" fill="#dfeef3"></rect>
-      <rect x="98" y="72" width="38" height="10" rx="5" fill="#00a56a"></rect>
-      <rect x="98" y="94" width="50" height="26" rx="8" fill="#fff0d5"></rect>
-      <circle cx="112" cy="146" r="5" fill="#fff"></circle>
-      <circle cx="55" cy="106" r="32" fill="#ff8066"></circle>
-      <path d="M36 106h38M55 87v38" stroke="#fff" stroke-width="8" stroke-linecap="round"></path>
-      <path d="M38 34c20-18 52-17 72 0" fill="none" stroke="#00a56a" stroke-width="8" stroke-linecap="round"></path>
-      <circle cx="177" cy="74" r="14" fill="#ffd166"></circle>
+    <svg class="hero-illust" viewBox="0 0 230 188" aria-hidden="true">
+      <path d="M38 139c9-44 49-82 97-82 46 0 78 31 78 69 0 36-33 55-90 55-55 0-93-10-85-42Z" fill="#e5f8f0"></path>
+      <rect x="89" y="20" width="86" height="142" rx="20" fill="#143f6b"></rect>
+      <rect x="100" y="36" width="64" height="102" rx="12" fill="#fff"></rect>
+      <rect x="110" y="50" width="44" height="10" rx="5" fill="#d6edf7"></rect>
+      <rect x="110" y="72" width="48" height="34" rx="10" fill="#ecfff7"></rect>
+      <path d="M121 89h23M132.5 77.5v23" stroke="#00a56a" stroke-width="7" stroke-linecap="round"></path>
+      <circle cx="132" cy="150" r="5" fill="#fff"></circle>
+      <rect x="24" y="92" width="72" height="50" rx="16" fill="#ffd56b"></rect>
+      <path d="M37 112h44M37 126h25" stroke="#143f6b" stroke-width="7" stroke-linecap="round"></path>
+      <circle cx="189" cy="85" r="24" fill="#ff8a70"></circle>
+      <path d="M178 86h22M189 75v22" stroke="#fff" stroke-width="7" stroke-linecap="round"></path>
+      <path d="M41 52c17-19 45-26 72-17" fill="none" stroke="#00a56a" stroke-width="9" stroke-linecap="round"></path>
     </svg>`;
+}
+
+function icon(name) {
+  const paths = {
+    apply: `<path d="M10 4h10a2 2 0 0 1 2 2v16H4V6a2 2 0 0 1 2-2h4Z"/><path d="M9 9h6M9 13h6M12 17h8"/>`,
+    diagnosis: `<circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/><path d="M11 8v6M8 11h6"/>`,
+    status: `<path d="M4 5h16v14H4z"/><path d="m7 12 3 3 7-7"/>`,
+    login: `<path d="M10 17H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4"/><path d="m14 8 4 4-4 4M18 12H9"/>`,
+    atm: `<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M8 15h3M14 15h2"/>`,
+    borrow: `<path d="M12 3v18M7 8l5-5 5 5"/><path d="M5 21h14"/>`,
+    repay: `<path d="M12 21V3M7 16l5 5 5-5"/><path d="M5 3h14"/>`,
+    support: `<path d="M5 18a7 7 0 1 1 14 0"/><path d="M5 18v2h4v-5H5v3Zm14 0v2h-4v-5h4v3Z"/>`,
+    document: `<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v6h5M10 13h6M10 17h6"/>`,
+    rate: `<path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/>`,
+    calendar: `<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="M8 15h4v3H8z"/>`,
+    sim: `<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M16 15h0"/>`
+  };
+  return `<svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">${paths[name] || paths.document}</svg>`;
+}
+
+function menuIcon(item) {
+  if (item.includes("申込")) return "apply";
+  if (item.includes("診断")) return "diagnosis";
+  if (item.includes("審査")) return "status";
+  if (item.includes("ログイン") || item.includes("契約中")) return "login";
+  if (item.includes("ATM")) return "atm";
+  if (item.includes("借入")) return "borrow";
+  if (item.includes("返済期日") || item.includes("返済額")) return "calendar";
+  if (item.includes("返済シミュレーション")) return "sim";
+  if (item.includes("返済")) return "repay";
+  if (item.includes("金利")) return "rate";
+  if (item.includes("お問い合わせ")) return "support";
+  return "document";
 }
 
 function header(title = APP_CONFIG.brand.serviceName, showBack = false) {
@@ -58,7 +97,7 @@ function header(title = APP_CONFIG.brand.serviceName, showBack = false) {
       <div class="brand-row">
         <div class="brand">
           ${showBack ? `<button class="icon-btn" data-action="back" aria-label="戻る">‹</button>` : logo()}
-          <div><strong>${title}</strong><span>${APP_CONFIG.brand.productName}</span></div>
+          <div><strong>${title}</strong><span>${showBack ? APP_CONFIG.brand.bankName : "カードローン Sプラス"}</span></div>
         </div>
         <button class="icon-btn" data-view="contact" aria-label="お問い合わせ">?</button>
       </div>
@@ -79,33 +118,36 @@ function home() {
   return `${header()}
     <section class="screen">
       <div class="hero">
-        <span class="pill">LINEからスムーズに手続き</span>
-        <h1>急な出費に、迷わず申込へ。</h1>
-        <p>診断、申込、審査状況、会員メニューまでスマートフォンで完結しやすい形にまとめました。</p>
-        <div class="button-row">
-          <button class="primary" data-view="apply">今すぐ申込</button>
-          <button class="secondary" data-view="diagnosis">お借入れ診断</button>
-        </div>
+        <span class="pill">最短ルートで手続き</span>
+        <h1>急な出費、スマホで準備。</h1>
+        <p>申込も、返済日の確認も、必要な操作だけをすぐ見つけられます。</p>
         ${illustration()}
       </div>
-      <div class="summary-band">
-        <div class="metric light"><span>借入利率</span><strong>${APP_CONFIG.product.rate}</strong></div>
-        <div class="metric"><span>契約額</span><strong>${APP_CONFIG.product.limit}</strong></div>
-      </div>
-      <div class="section-title"><h2>既存のお客様</h2></div>
-      <div class="panel">
-        <p class="notice">返済期日と金額、借入状況をすぐ確認できます。</p>
-        <div class="button-row" style="margin-top:12px">
-          <button class="secondary" data-view="member">会員ログイン</button>
-          <button class="ghost" data-view="status">審査状況のご確認</button>
+      <div class="action-stack">
+        <button class="big-action apply-action" data-view="apply">${icon("apply")}<span><b>今すぐ申込</b><small>新規のお客様はこちら</small></span></button>
+        <div class="mini-actions">
+          <button data-view="diagnosis">${icon("diagnosis")}<b>借入診断</b></button>
+          <button data-view="status">${icon("status")}<b>審査状況</b></button>
         </div>
       </div>
-      ${quickGrid()}
+      <div class="visual-status" data-view="member">
+        <div>
+          <span>会員のお客様</span>
+          <strong>${APP_CONFIG.customer.nextDueDate}</strong>
+          <small>次回返済 ${yen(APP_CONFIG.customer.nextPayment)}</small>
+        </div>
+        ${icon("calendar")}
+      </div>
+      <div class="benefit-strip">
+        <span>ネット完結</span><span>ATM対応</span><span>${APP_CONFIG.product.rate}</span>
+      </div>
+      ${quickGrid(true)}
     </section>${nav()}`;
 }
 
-function quickGrid() {
-  return `<div class="section-title"><h2>メニュー</h2></div><div class="grid">${APP_CONFIG.quickItems.map((item) => `<button class="tile" data-menu="${item}"><b>${item}</b><span>タップして確認</span></button>`).join("")}</div>`;
+function quickGrid(compact = false) {
+  const items = compact ? APP_CONFIG.quickItems.filter((item) => !["今すぐ申込", "お借入れ診断", "審査状況のご確認"].includes(item)) : APP_CONFIG.quickItems;
+  return `<div class="section-title"><h2>${compact ? "よく使うメニュー" : "メニュー"}</h2></div><div class="grid icon-grid">${items.map((item) => `<button class="tile" data-menu="${item}">${icon(menuIcon(item))}<b>${item}</b></button>`).join("")}</div>`;
 }
 
 function apply() {
@@ -147,23 +189,28 @@ function member() {
   save();
   const c = APP_CONFIG.customer;
   return `${header("会員ホーム", true)}<section class="screen">
-    <div class="panel">
-      <strong>${c.name} 様</strong>
-      <p style="color:var(--muted); margin:6px 0 0">会員番号 ${c.memberId}</p>
+    <div class="member-hero">
+      <div>
+        <span>こんにちは</span>
+        <h1>${c.name} 様</h1>
+        <small>会員番号 ${c.memberId}</small>
+      </div>
+      ${icon("login")}
     </div>
-    <div class="section-title"><h2>次回のご返済</h2></div>
-    <div class="summary-band">
-      <div class="metric"><span>返済期日</span><strong>${c.nextDueDate}</strong></div>
-      <div class="metric light"><span>返済額</span><strong>${yen(c.nextPayment)}</strong></div>
+    <div class="due-card">
+      ${icon("calendar")}
+      <span>次回のご返済</span>
+      <strong>${c.nextDueDate}</strong>
+      <b>${yen(c.nextPayment)}</b>
     </div>
     <div class="section-title"><h2>借入状況</h2></div>
-    <div class="panel">
+    <div class="balance-card">
       <div class="summary-band">
-        <div><span>ご利用残高</span><h2>${yen(c.borrowed)}</h2></div>
-        <div><span>ご利用可能額</span><h2>${yen(c.available)}</h2></div>
+        <div><span>借入中</span><h2>${yen(c.borrowed)}</h2></div>
+        <div><span>借入できる額</span><h2>${yen(c.available)}</h2></div>
       </div>
       <div class="meter"><i style="width:${pct()}%"></i></div>
-      <p style="color:var(--muted); font-size:12px">借入限度額 ${yen(c.contractLimit)} / 適用利率 ${c.rate}</p>
+      <p style="color:var(--muted); font-size:12px">限度額 ${yen(c.contractLimit)} / ${c.rate}</p>
     </div>
     <div class="button-row" style="margin-top:14px">
       <button class="primary" data-view="borrow">新たな借り入れ</button>
