@@ -30,13 +30,7 @@ function save() {
 function logo() {
   return `
     <div class="logo-lockup" role="img" aria-label="SBI新生銀行カードローン">
-      <svg class="logo-emblem" viewBox="0 0 62 38" aria-hidden="true">
-        <rect width="62" height="38" rx="5" fill="#143f6b"></rect>
-        <path d="M10 11h20v5H17.5a2.6 2.6 0 0 0 0 5.2h6.2a7.9 7.9 0 0 1 0 15.8H10v-5h13.7a2.6 2.6 0 0 0 0-5.2h-6.2a7.9 7.9 0 0 1 0-15.8Z" fill="#fff"></path>
-        <path d="M35 11h7.5c5 0 8 2.2 8 6 0 2.2-1.1 3.8-3.2 4.6 2.6.8 4 2.7 4 5.4 0 4.4-3.3 7-8.8 7H35V11Zm6 5v4h2c1.5 0 2.4-.7 2.4-2s-.9-2-2.4-2h-2Zm0 9v4h2.6c1.6 0 2.6-.8 2.6-2s-1-2-2.6-2H41Z" fill="#fff"></path>
-        <circle cx="55" cy="8" r="4.5" fill="#00a56a"></circle>
-      </svg>
-      <span>SBI新生銀行</span>
+      <img class="brand-logo-img" src="assets/header-logo.png" alt="SBI新生銀行">
     </div>`;
 }
 
@@ -97,7 +91,7 @@ function header(title = APP_CONFIG.brand.serviceName, showBack = false) {
       <div class="brand-row">
         <div class="brand">
           ${showBack ? `<button class="icon-btn" data-action="back" aria-label="戻る">‹</button>` : logo()}
-          <div><strong>${title}</strong><span>${showBack ? APP_CONFIG.brand.bankName : "カードローン Sプラス"}</span></div>
+          <div class="brand-copy"><strong>${title}</strong><span>${showBack ? APP_CONFIG.brand.bankName : "カードローン Sプラス"}</span></div>
         </div>
         <button class="icon-btn" data-view="contact" aria-label="お問い合わせ">?</button>
       </div>
