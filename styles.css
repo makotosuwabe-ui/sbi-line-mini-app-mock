@@ -79,6 +79,10 @@ button {
   padding: 8px 10px;
   border-radius: 8px;
   background: #fff;
+  background-image: url("assets/header-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 152px auto;
   box-shadow: 0 5px 16px rgba(20, 63, 107, 0.14);
 }
 
@@ -86,6 +90,11 @@ button {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.logo-lockup svg,
+.logo-lockup > span {
+  display: none;
 }
 
 .brand strong {
